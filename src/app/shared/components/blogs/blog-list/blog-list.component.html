@@ -1,0 +1,7 @@
+<!-- <div *ngFor="let blog of blogs">
+  {{ blog.title }}
+</div> -->
+
+@for(blog of blogs; track blog.id){
+  <div>{{blog.title}}</div>
+}
