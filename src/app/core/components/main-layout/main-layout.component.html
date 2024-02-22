@@ -1,0 +1,17 @@
+<div class="layout-container">
+  <div class="sidebar">
+    <!-- Sidebar content -->
+    <nav>
+      <img src="/assets/images/logo.png" alt="logo" width="100px" />
+      <a
+        routerLink="/"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </nav>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
