@@ -1,0 +1,52 @@
+.layout-container {
+  display: flex;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.sidebar {
+  position: fixed; /* Fix sidebar to the viewport */
+  top: 0; /* Align sidebar to the top of the viewport */
+  left: 0; /* Align sidebar to the left of the viewport */
+  width: 210px; /* Sidebar width */
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  background-color: #222; /* Light grey background */
+  padding: 20px;
+}
+
+.content {
+  margin-left: 250px; /* Offset content to the right of the sidebar */
+  flex-grow: 1; /* Take up the remaining space */
+  overflow-y: auto; /* Scrollable content area */
+  padding: 20px;
+  height: calc(100vh - 40px); /* Optional: Set to full viewport height */
+  overflow-y: scroll; /* Optional: Always enable vertical scrolling */
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar nav a {
+  text-decoration: none; /* Remove underline from links */
+  font-family: sans-serif;
+  color: white; /* Black text color for links */
+  padding: 10px 15px; /* Padding for larger click area and spacing */
+  margin: 5px 0; /* Margin between links */
+  border-radius: 4px; /* Rounded corners for a modern look */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer;
+}
+
+.sidebar nav a:hover {
+  background-color: #ffcc00; /* Yellow background on hover */
+  color: #000; /* Optional: Change text color on hover if needed */
+}
+
+/* Active link styling */
+.sidebar nav a.active {
+  background-color: #ffcc00; /* Yellow background for active link */
+  color: #fff; /* White text for contrast */
+}
