@@ -3,12 +3,18 @@
     <!-- Sidebar content -->
     <nav>
       <img src="/assets/images/logo.png" alt="logo" width="100px" />
-      <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
       @if (authService.isLoggedIn()){
-        <a (click)="this.authService.logout()">Logout</a>
-        }@else {
-        <a routerLink="/login">Login</a>
-        }
+      <a
+        routerLink="/"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+      <a (click)="this.authService.logout()">Logout</a>
+      }@else {
+      <a routerLink="/login">Login</a>
+      <a routerLink="/signup">Sign Up</a>
+      }
     </nav>
   </div>
   <div class="content">
